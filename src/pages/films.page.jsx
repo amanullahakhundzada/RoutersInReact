@@ -12,10 +12,9 @@ export default function FilmsPage() {
   function getFilms() {
     fetch("https://ghibliapi.herokuapp.com/films")
       .then((res) => res.json())
-      .then((films) => {
-        setList(films);
-      });
-    console.log(films).catch((err) => console.error(err));
+      .then((films) => { setList(films);
+        console.log(films) })
+    .catch((err) => console.error(err));
   }
 
   useEffect(() => {
@@ -49,5 +48,6 @@ export default function FilmsPage() {
         })}
       </ul>
     </div>
-  );
+  ); 
+
 }
