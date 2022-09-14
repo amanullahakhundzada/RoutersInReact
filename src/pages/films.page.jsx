@@ -45,7 +45,7 @@ export default function FilmsPage() {
       </form>
       <ul>
         {filteredFilms.map((film) => {
-          <li key={film.id}><Link to={`film/${film.id}`}></Link>{film.title}</li>;
+          <li key={film.id}><Link to={`films/${film.id}`}></Link>{film.title}</li>;
         })}
       </ul>
     </div>
